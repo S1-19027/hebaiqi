@@ -30,12 +30,12 @@ void menu_draw_start_screen(void)
 
     // 绘制PVE模式选择框
     display_draw_button(40, 50, 200, 100, "PVE MODE", 1);
-    
+
     // 绘制PVP模式选择框
     display_draw_button(40, 110, 200, 160, "PVP MODE", 1);
-    
+
     // 显示说明文字
-    LCD_ShowString(20, 170, 240, 12, 12, (u8 *)"Tap PVE/PVP to start game");
+    LCD_ShowString(20, 190, 240, 12, 12, (u8 *)"Tap PVE/PVP to start game");
 
     menu_draw_start_touch_status();
 }
@@ -122,6 +122,7 @@ void menu_handle_touch(void)
 
     if (cell_r == r && cell_c == c)
     {
+        // 取消选择：先清除高亮，再重绘棋子
         display_draw_piece_at(g_sel_r, g_sel_c, g_board[g_sel_r][g_sel_c]);
         g_sel_r = -1;
         g_sel_c = -1;
@@ -130,6 +131,7 @@ void menu_handle_touch(void)
 
     if (g_board[cell_r][cell_c] == g_turn)
     {
+        // 切换选择：先清除之前的高亮，再设置新的高亮
         display_draw_piece_at(g_sel_r, g_sel_c, g_board[g_sel_r][g_sel_c]);
         g_sel_r = cell_r;
         g_sel_c = cell_c;
@@ -139,11 +141,13 @@ void menu_handle_touch(void)
 
     if (game_try_move(r, c, cell_r, cell_c))
     {
+        // 清除高亮后再重置选择
+        display_clear_highlight(g_sel_r, g_sel_c);
         g_sel_r = -1;
         g_sel_c = -1;
         if (g_state == STATE_PLAYING && g_mode == MODE_PVE && g_turn == CELL_WHITE)
         {
-            delay_ms(500);
+            delay_ms(50);
             ai_turn();
         }
         return;

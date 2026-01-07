@@ -26,6 +26,22 @@
 // 界面状态
 #define UI_START 0
 #define UI_GAME 1
+// 添加这些定义
+#define BOARD_MARGIN_LEFT 20   // 左边距
+#define BOARD_MARGIN_RIGHT 30  // 右边距
+#define BOARD_MARGIN_TOP 40    // 顶部状态栏高度
+#define BOARD_MARGIN_BOTTOM 50 // 底部按钮区域高度
+// 在颜色定义部分添加
+#define WOOD_BROWN 0x9AE4 // 木质棕色
+#define WOOD_LIGHT 0xCE79 // 浅木质色
+#define WOOD_DARK 0x6245  // 深木质色
+#define WOOD_GRID 0x5A85  // 棋盘线颜色（深棕色）
+
+#define SCREEN_W 240
+#define SCREEN_H 320
+
+#define TOP_UI_H 36    // 状态栏
+#define BOTTOM_UI_H 40 // 按钮区
 
 // 全局变量声明
 extern u8 g_board[BOARD_N][BOARD_N];
@@ -72,7 +88,7 @@ void display_draw_board_content(void);
 void display_draw_button(int x1, int y1, int x2, int y2, const char *label, int active);
 void display_highlight_cell(int r, int c);
 void display_set_game_over(const char *msg);
-
+void display_clear_highlight(int r, int c);
 // AI函数声明
 void ai_turn(void);
 
@@ -85,5 +101,7 @@ int game_touch_to_cell(int x, int y, int *out_r, int *out_c);
 int game_cell_size(void);
 int game_board_x0(void);
 int game_board_y0(void);
-
+int game_board_available_width(void);
+int game_board_available_height(void);
+void game_cross_xy(int r, int c, int *x, int *y);
 #endif

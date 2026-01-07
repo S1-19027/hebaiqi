@@ -20,3 +20,4 @@
 .\obj\game_display.o: ..\inc\EXTI.h
 .\obj\game_display.o: ..\inc\Register_config.h
 .\obj\game_display.o: D:\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\game_display.o: D:\MDK\ARM\ARMCC\Bin\..\include\math.h
