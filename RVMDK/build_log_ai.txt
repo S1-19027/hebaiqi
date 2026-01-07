@@ -1,0 +1,63 @@
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM3210E-EVAL'
+compiling dma.c...
+compiling SPI.c...
+compiling systick.c...
+compiling EXTI.c...
+..\inc\DigitalTube.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\inc\EXTI.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\src\EXTI.c: 2 warnings, 0 errors
+compiling main.c...
+..\inc\DigitalTube.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\inc\EXTI.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\src\main.c(275): warning:  #177-D: variable "size" was declared but never referenced
+  	int size = cs * BOARD_N;
+..\src\main.c(79): warning:  #177-D: function "cell_cx" was declared but never referenced
+  static int cell_cx(int c) { return board_x0() + c * cell_size() + cell_size() / 2; }
+..\src\main.c(80): warning:  #177-D: function "cell_cy" was declared but never referenced
+  static int cell_cy(int r) { return board_y0() + r * cell_size() + cell_size() / 2; }
+..\src\main.c: 5 warnings, 0 errors
+compiling sys.c...
+..\src\sys.c(62): warning:  #550-D: variable "fac_ms" was set but never used
+  static u16 fac_ms=0;//ms��ʱ������
+..\src\sys.c: 1 warning, 0 errors
+compiling lcd.c...
+..\src\lcd.c(263): warning:  #940-D: missing return statement at end of non-void function "LCD_ReadPoint"
+  }		 
+..\src\lcd.c(298): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;  
+..\src\lcd.c(410): warning:  #177-D: variable "hsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "heareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "vsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "veareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(411): warning:  #177-D: variable "hsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "heaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "vsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "veaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(567): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;
+..\src\lcd.c(1371): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,12,240,12,12,showstr);
+..\src\lcd.c(1384): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,24,240,12,12,showstr);
+..\src\lcd.c(1398): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	  LCD_ShowString(45,0,240,12,12,showstr); 
+..\src\lcd.c(1268): warning:  #177-D: function "getPos" was declared but never referenced
+  static void getPos(u16 xScreen, u16 yScreen) {
+..\src\lcd.c: 15 warnings, 0 errors
+linking...
+Program Size: Code=15732 RO-data=6864 RW-data=232 ZI-data=1016  
+".\Obj\STM3210E-EVAL.axf" - 0 Error(s), 23 Warning(s).
+Build Time Elapsed:  00:00:01

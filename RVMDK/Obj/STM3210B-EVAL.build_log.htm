@@ -1,0 +1,132 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: air csdn, 0, LIC=32B1Q-NBD0N-AR2XW-QSKBM-YMS3J-UK968
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.21a
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DCM.DLL V1.13.8.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V2.0.18.0
+Dialog DLL:      TCM.DLL V1.14.14.0
+ 
+<h2>Project:</h2>
+d:\20685\下载\触摸屏校准\Project\RVMDK\EID-V2.uvprojx
+Project File Date:  01/01/2026
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM3210B-EVAL'
+compiling misc.c...
+compiling systick.c...
+compiling stm32f10x_rcc.c...
+compiling Timer.c...
+compiling SPI.c...
+compiling IIC-lib.c...
+..\src\IIC-lib.c(126): warning:  #1-D: last line of file ends without a newline
+  }
+..\src\IIC-lib.c: 1 warning, 0 errors
+compiling EXTI.c...
+..\inc\DigitalTube.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\inc\EXTI.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\src\EXTI.c: 2 warnings, 0 errors
+compiling stm32f10x_it.c...
+compiling stm32f10x_gpio.c...
+compiling main.c...
+..\inc\DigitalTube.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\inc\EXTI.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\src\main.c(275): warning:  #177-D: variable "size" was declared but never referenced
+  	int size = cs * BOARD_N;
+..\src\main.c(79): warning:  #177-D: function "cell_cx" was declared but never referenced
+  static int cell_cx(int c) { return board_x0() + c * cell_size() + cell_size() / 2; }
+..\src\main.c(80): warning:  #177-D: function "cell_cy" was declared but never referenced
+  static int cell_cy(int r) { return board_y0() + r * cell_size() + cell_size() / 2; }
+..\src\main.c: 5 warnings, 0 errors
+compiling dma.c...
+compiling UART.c...
+compiling stm32f10x_tim.c...
+compiling sys.c...
+..\src\sys.c(62): warning:  #550-D: variable "fac_ms" was set but never used
+  static u16 fac_ms=0;//ms��ʱ������
+..\src\sys.c: 1 warning, 0 errors
+compiling lcd.c...
+..\src\lcd.c(263): warning:  #940-D: missing return statement at end of non-void function "LCD_ReadPoint"
+  }		 
+..\src\lcd.c(298): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;  
+..\src\lcd.c(410): warning:  #177-D: variable "hsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "heareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "vsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "veareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(411): warning:  #177-D: variable "hsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "heaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "vsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "veaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(567): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;
+..\src\lcd.c(1365): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,12,240,12,12,showstr);
+..\src\lcd.c(1378): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,24,240,12,12,showstr);
+..\src\lcd.c(1392): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	  LCD_ShowString(45,0,240,12,12,showstr); 
+..\src\lcd.c(1071): warning:  #177-D: function "getPos" was declared but never referenced
+  static void getPos(u16 xScreen, u16 yScreen) {
+..\src\lcd.c(1226): warning:  #177-D: function "touch_test_response" was declared but never referenced
+  static int touch_test_response(u16 *out_raw_x, u16 *out_raw_y)
+..\src\lcd.c: 16 warnings, 0 errors
+compiling stm32f10x_adc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_exti.c...
+compiling stm32f10x_dac.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_spi.c...
+compiling stm32f10x_i2c.c...
+compiling stm32f10x_bkp.c...
+compiling stm32f10x_can.c...
+compiling stm32f10x_crc.c...
+compiling stm32f10x_rtc.c...
+compiling stm32f10x_dbgmcu.c...
+compiling stm32f10x_dma.c...
+compiling stm32f10x_pwr.c...
+compiling stm32f10x_iwdg.c...
+assembling startup_stm32f10x_md.s...
+compiling stm32f10x_flash.c...
+compiling stm32f10x_sdio.c...
+compiling system_stm32f10x.c...
+compiling stm32f10x_wwdg.c...
+linking...
+Program Size: Code=17356 RO-data=6564 RW-data=220 ZI-data=1108  
+".\Obj\STM3210B-EVAL.axf" - 0 Error(s), 25 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  d:\20685\下载\触摸屏校准\Project\RVMDK\RTE
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

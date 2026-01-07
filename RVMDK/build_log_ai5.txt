@@ -1,0 +1,45 @@
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM3210E-EVAL'
+compiling lcd.c...
+..\src\lcd.c(263): warning:  #940-D: missing return statement at end of non-void function "LCD_ReadPoint"
+  }		 
+..\src\lcd.c(298): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;  
+..\src\lcd.c(410): warning:  #177-D: variable "hsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "heareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "vsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "veareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(411): warning:  #177-D: variable "hsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "heaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "vsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "veaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(567): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;
+..\src\lcd.c(997): warning:  #223-D: function "touch_raw_to_value" declared implicitly
+  	rx = touch_raw_to_value(touch_read_axis_raw(0xD0));
+..\src\lcd.c(997): warning:  #223-D: function "touch_read_axis_raw" declared implicitly
+  	rx = touch_raw_to_value(touch_read_axis_raw(0xD0));
+..\src\lcd.c(1126): error:  #159: declaration is incompatible with previous "touch_read_axis_raw" (declared at line 997)
+  static u16 touch_read_axis_raw(u8 cmd)
+..\src\lcd.c(1131): error:  #159: declaration is incompatible with previous "touch_raw_to_value" (declared at line 997)
+  static u16 touch_raw_to_value(u16 raw)
+..\src\lcd.c(1486): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,12,240,12,12,showstr);
+..\src\lcd.c(1499): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,24,240,12,12,showstr);
+..\src\lcd.c(1513): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	  LCD_ShowString(45,0,240,12,12,showstr); 
+..\src\lcd.c(1383): warning:  #177-D: function "getPos" was declared but never referenced
+  static void getPos(u16 xScreen, u16 yScreen) {
+..\src\lcd.c: 17 warnings, 2 errors
+".\Obj\STM3210E-EVAL.axf" - 2 Error(s), 17 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:02

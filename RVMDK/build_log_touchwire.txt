@@ -1,0 +1,38 @@
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM3210E-EVAL'
+compiling lcd.c...
+..\src\lcd.c(263): warning:  #940-D: missing return statement at end of non-void function "LCD_ReadPoint"
+  }		 
+..\src\lcd.c(298): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;  
+..\src\lcd.c(410): warning:  #177-D: variable "hsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "heareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "vsareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(410): warning:  #177-D: variable "veareg" was declared but never referenced
+  	u8 hsareg,heareg,vsareg,veareg;
+..\src\lcd.c(411): warning:  #177-D: variable "hsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "heaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "vsaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(411): warning:  #177-D: variable "veaval" was declared but never referenced
+  	u16 hsaval,heaval,vsaval,veaval; 
+..\src\lcd.c(567): warning:  #177-D: variable "temp" was declared but never referenced
+  	u16 temp;
+..\src\lcd.c(1351): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,12,240,12,12,showstr);
+..\src\lcd.c(1364): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  					LCD_ShowString(45,24,240,12,12,showstr);
+..\src\lcd.c(1378): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	  LCD_ShowString(45,0,240,12,12,showstr); 
+..\src\lcd.c(1248): warning:  #177-D: function "getPos" was declared but never referenced
+  static void getPos(u16 xScreen, u16 yScreen) {
+..\src\lcd.c: 15 warnings, 0 errors
+linking...
+Program Size: Code=17080 RO-data=6704 RW-data=272 ZI-data=1016  
+".\Obj\STM3210E-EVAL.axf" - 0 Error(s), 15 Warning(s).
+Build Time Elapsed:  00:00:00

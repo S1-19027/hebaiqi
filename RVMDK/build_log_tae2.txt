@@ -1,0 +1,18 @@
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'STM3210E-EVAL'
+compiling main.c...
+..\inc\DigitalTube.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\inc\EXTI.h(17): warning:  #1-D: last line of file ends without a newline
+  /******END OF FILE****/
+..\src\main.c(275): warning:  #177-D: variable "size" was declared but never referenced
+  	int size = cs * BOARD_N;
+..\src\main.c(79): warning:  #177-D: function "cell_cx" was declared but never referenced
+  static int cell_cx(int c) { return board_x0() + c * cell_size() + cell_size() / 2; }
+..\src\main.c(80): warning:  #177-D: function "cell_cy" was declared but never referenced
+  static int cell_cy(int r) { return board_y0() + r * cell_size() + cell_size() / 2; }
+..\src\main.c: 5 warnings, 0 errors
+linking...
+Program Size: Code=13712 RO-data=6544 RW-data=196 ZI-data=1012  
+".\Obj\STM3210E-EVAL.axf" - 0 Error(s), 5 Warning(s).
+Build Time Elapsed:  00:00:01
