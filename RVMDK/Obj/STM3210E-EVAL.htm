@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Obj\STM3210E-EVAL.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Obj\STM3210E-EVAL.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Wed Jan 07 22:38:02 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060300: Last Updated: Wed Jan 07 23:18:08 2026
 <BR><P>
 <H3>Maximum Stack Usage =        432 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -469,8 +469,8 @@ Global Symbols
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DATAOUT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_screen
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
 </UL>
 
 <P><STRONG><a name="[56]"></a>LCD_Config_DIN</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, lcd.o(i.LCD_Config_DIN))
@@ -912,11 +912,11 @@ Global Symbols
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_check_game_end
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_apply_captures
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 </UL>
 
 <P><STRONG><a name="[6b]"></a>delay_ms</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, sys.o(i.delay_ms))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -948,8 +948,7 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawRectangle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_screen
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_screen
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
 </UL>
 
@@ -962,7 +961,7 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawRectangle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_draw_board_content
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_try_move
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_apply_captures
@@ -976,10 +975,10 @@ Global Symbols
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_board_x0
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawRectangle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 </UL>
 
-<P><STRONG><a name="[ad]"></a>display_init_game_view</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, game_display.o(i.display_init_game_view))
+<P><STRONG><a name="[ad]"></a>display_init_game_view</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, game_display.o(i.display_init_game_view))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = display_init_game_view &rArr; display_draw_board_content &rArr; display_draw_piece_at &rArr; LCD_DrawRectangle &rArr; LCD_DrawLine &rArr; LCD_DrawPoint &rArr; LCD_SetCursor &rArr; LCD_WR_REG &rArr; DATAOUT &rArr; LCD_Config_DOUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_draw_button
@@ -988,8 +987,7 @@ Global Symbols
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_update_status_bar
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
 </UL>
 
 <P><STRONG><a name="[af]"></a>display_set_game_over</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, game_display.o(i.display_set_game_over))
@@ -1044,7 +1042,7 @@ Global Symbols
 <LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_has_any_move
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_count_pieces
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_turn
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_try_move
 </UL>
@@ -1080,7 +1078,7 @@ Global Symbols
 <P><STRONG><a name="[be]"></a>game_reset_board</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, game.o(i.game_reset_board))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = game_reset_board
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
+<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
 </UL>
 
 <P><STRONG><a name="[a2]"></a>game_rng_next</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, game.o(i.game_rng_next))
@@ -1090,7 +1088,7 @@ Global Symbols
 <P><STRONG><a name="[b3]"></a>game_touch_in_rect</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, game.o(i.game_touch_in_rect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = game_touch_in_rect
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_touch_to_cell
 </UL>
@@ -1104,7 +1102,7 @@ Global Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_board_y0
 <LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_board_x0
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 </UL>
 
 <P><STRONG><a name="[a4]"></a>game_try_move</STRONG> (Thumb, 182 bytes, Stack size 24 bytes, game.o(i.game_try_move))
@@ -1117,7 +1115,7 @@ Global Symbols
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_apply_captures
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_abs_i
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_turn
 </UL>
 
@@ -1129,21 +1127,20 @@ Global Symbols
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fill
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_try_move
 </UL>
 
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 290 bytes, Stack size 16 bytes, main.o(i.main))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 338 bytes, Stack size 16 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 432<LI>Call Chain = main &rArr; menu_handle_touch &rArr; ai_turn &rArr; game_try_move &rArr; game_apply_captures &rArr; display_draw_piece_at &rArr; LCD_DrawRectangle &rArr; LCD_DrawLine &rArr; LCD_DrawPoint &rArr; LCD_SetCursor &rArr; LCD_WR_REG &rArr; DATAOUT &rArr; LCD_Config_DOUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;systick_init
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_touch_status
 <LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_screen
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_touch_in_rect
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_init
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Touch_PenDown
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Touch_Init
@@ -1156,7 +1153,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[b9]"></a>menu_draw_start_screen</STRONG> (Thumb, 170 bytes, Stack size 16 bytes, game_menu.o(i.menu_draw_start_screen))
+<P><STRONG><a name="[b9]"></a>menu_draw_start_screen</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, game_menu.o(i.menu_draw_start_screen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = menu_draw_start_screen &rArr; display_draw_button &rArr; LCD_DrawRectangle &rArr; LCD_DrawLine &rArr; LCD_DrawPoint &rArr; LCD_SetCursor &rArr; LCD_WR_REG &rArr; DATAOUT &rArr; LCD_Config_DOUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_touch_status
@@ -1164,7 +1161,8 @@ Global Symbols
 <LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowString
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[bb]"></a>menu_draw_start_touch_status</STRONG> (Thumb, 118 bytes, Stack size 80 bytes, game_menu.o(i.menu_draw_start_touch_status))
@@ -1179,16 +1177,15 @@ Global Symbols
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bc]"></a>menu_handle_touch</STRONG> (Thumb, 476 bytes, Stack size 32 bytes, game_menu.o(i.menu_handle_touch))
+<P><STRONG><a name="[bd]"></a>menu_handle_touch</STRONG> (Thumb, 406 bytes, Stack size 32 bytes, game_menu.o(i.menu_handle_touch))
 <BR><BR>[Stack]<UL><LI>Max Depth = 416<LI>Call Chain = menu_handle_touch &rArr; ai_turn &rArr; game_try_move &rArr; game_apply_captures &rArr; display_draw_piece_at &rArr; LCD_DrawRectangle &rArr; LCD_DrawLine &rArr; LCD_DrawPoint &rArr; LCD_SetCursor &rArr; LCD_WR_REG &rArr; DATAOUT &rArr; LCD_Config_DOUT &rArr; GPIO_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_touch_in_rect
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_draw_start_screen
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_touch_in_rect
 <LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_start_game
 <LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_highlight_cell
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_draw_button
 <LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ai_turn
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_update_status_bar
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_draw_piece_at
 <LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_try_move
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_touch_to_cell
@@ -1196,14 +1193,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bd]"></a>menu_start_game</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, game_menu.o(i.menu_start_game))
+<P><STRONG><a name="[bc]"></a>menu_start_game</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, game_menu.o(i.menu_start_game))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = menu_start_game &rArr; display_init_game_view &rArr; display_draw_board_content &rArr; display_draw_piece_at &rArr; LCD_DrawRectangle &rArr; LCD_DrawLine &rArr; LCD_DrawPoint &rArr; LCD_SetCursor &rArr; LCD_WR_REG &rArr; DATAOUT &rArr; LCD_Config_DOUT &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_init_game_view
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_reset_board
 <LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;game_check_game_end
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;menu_handle_touch
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[b6]"></a>systick_init</STRONG> (Thumb, 98 bytes, Stack size 32 bytes, systick.o(i.systick_init))

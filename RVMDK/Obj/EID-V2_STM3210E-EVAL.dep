@@ -1,5 +1,5 @@
 Dependencies for Project 'EID-V2', Target 'STM3210E-EVAL': (DO NOT MODIFY !)
-F (..\src\main.c)(0x695E6EE5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\Libraries\CMSIS\Core\CM3-IF:\biaozhun4\嵌入式大作业\Project\RVMDK\RTE-ID:\MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="521" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+F (..\src\main.c)(0x695E7669)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\Libraries\CMSIS\Core\CM3-IF:\biaozhun4\嵌入式大作业\Project\RVMDK\RTE-ID:\MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="521" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
 I (..\inc\main.h)(0x672B4444)
 I (..\..\Libraries\CMSIS\Core\CM3\stm32f10x.h)(0x672B44FE)
 I (..\..\Libraries\CMSIS\Core\CM3\core_cm3.h)(0x672B44FC)
@@ -179,7 +179,7 @@ I (D:\MDK\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (..\inc\EXTI.h)(0x672B4444)
 I (..\inc\Register_config.h)(0x672B4446)
 I (D:\MDK\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (..\src\game_display.c)(0x695E4F35)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\Libraries\CMSIS\Core\CM3-IF:\biaozhun4\嵌入式大作业\Project\RVMDK\RTE-ID:\MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="521" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\game_display.o --omf_browse .\obj\game_display.crf --depend .\obj\game_display.d)
+F (..\src\game_display.c)(0x695E774A)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\Libraries\CMSIS\Core\CM3-IF:\biaozhun4\嵌入式大作业\Project\RVMDK\RTE-ID:\MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="521" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\game_display.o --omf_browse .\obj\game_display.crf --depend .\obj\game_display.d)
 I (..\inc\game.h)(0x695E4D4E)
 I (..\inc\main.h)(0x672B4444)
 I (..\..\Libraries\CMSIS\Core\CM3\stm32f10x.h)(0x672B44FE)
@@ -200,7 +200,7 @@ I (D:\MDK\ARM\ARMCC\include\stdlib.h)(0x574E3E26)
 I (..\inc\EXTI.h)(0x672B4444)
 I (..\inc\Register_config.h)(0x672B4446)
 I (D:\MDK\ARM\ARMCC\include\stdio.h)(0x574E3E26)
-F (..\src\game_menu.c)(0x695E6FB7)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\Libraries\CMSIS\Core\CM3-IF:\biaozhun4\嵌入式大作业\Project\RVMDK\RTE-ID:\MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="521" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\game_menu.o --omf_browse .\obj\game_menu.crf --depend .\obj\game_menu.d)
+F (..\src\game_menu.c)(0x695E78B5)(--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\inc -I ..\..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\..\Libraries\CMSIS\Core\CM3-IF:\biaozhun4\嵌入式大作业\Project\RVMDK\RTE-ID:\MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-ID:\MDK\ARM\CMSIS\Include-D__UVISION_VERSION="521" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o .\obj\game_menu.o --omf_browse .\obj\game_menu.crf --depend .\obj\game_menu.d)
 I (..\inc\game.h)(0x695E4D4E)
 I (..\inc\main.h)(0x672B4444)
 I (..\..\Libraries\CMSIS\Core\CM3\stm32f10x.h)(0x672B44FE)

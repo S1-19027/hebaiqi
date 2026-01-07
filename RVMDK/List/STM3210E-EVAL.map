@@ -17,7 +17,7 @@ Section Cross References
     main.o(i.main) refers to lcd.o(i.TouchScreen) for TouchScreen
     main.o(i.main) refers to game_menu.o(i.menu_draw_start_touch_status) for menu_draw_start_touch_status
     main.o(i.main) refers to game.o(i.game_touch_in_rect) for game_touch_in_rect
-    main.o(i.main) refers to game_display.o(i.display_init_game_view) for display_init_game_view
+    main.o(i.main) refers to game_menu.o(i.menu_start_game) for menu_start_game
     main.o(i.main) refers to game_menu.o(i.menu_handle_touch) for menu_handle_touch
     main.o(i.main) refers to sys.o(i.delay_ms) for delay_ms
     main.o(i.main) refers to uart.o(.data) for FrameFlag
@@ -364,7 +364,6 @@ Section Cross References
     game_menu.o(i.menu_draw_start_screen) refers to game_display.o(i.display_draw_button) for display_draw_button
     game_menu.o(i.menu_draw_start_screen) refers to game_menu.o(i.menu_draw_start_touch_status) for menu_draw_start_touch_status
     game_menu.o(i.menu_draw_start_screen) refers to lcd.o(.data) for POINT_COLOR
-    game_menu.o(i.menu_draw_start_screen) refers to game.o(.data) for g_mode
     game_menu.o(i.menu_draw_start_touch_status) refers to lcd.o(i.Touch_PenDown) for Touch_PenDown
     game_menu.o(i.menu_draw_start_touch_status) refers to lcd.o(i.Touch_ReadDiag) for Touch_ReadDiag
     game_menu.o(i.menu_draw_start_touch_status) refers to lcd.o(i.Touch_Scan_MISO) for Touch_Scan_MISO
@@ -372,16 +371,15 @@ Section Cross References
     game_menu.o(i.menu_draw_start_touch_status) refers to lcd.o(.data) for POINT_COLOR
     game_menu.o(i.menu_handle_touch) refers to game.o(i.game_touch_in_rect) for game_touch_in_rect
     game_menu.o(i.menu_handle_touch) refers to game_menu.o(i.menu_start_game) for menu_start_game
-    game_menu.o(i.menu_handle_touch) refers to game_display.o(i.display_draw_button) for display_draw_button
-    game_menu.o(i.menu_handle_touch) refers to game_display.o(i.game_update_status_bar) for game_update_status_bar
-    game_menu.o(i.menu_handle_touch) refers to game_ai.o(i.ai_turn) for ai_turn
+    game_menu.o(i.menu_handle_touch) refers to game_menu.o(i.menu_draw_start_screen) for menu_draw_start_screen
     game_menu.o(i.menu_handle_touch) refers to game.o(i.game_touch_to_cell) for game_touch_to_cell
     game_menu.o(i.menu_handle_touch) refers to game_display.o(i.display_highlight_cell) for display_highlight_cell
     game_menu.o(i.menu_handle_touch) refers to game_display.o(i.display_draw_piece_at) for display_draw_piece_at
     game_menu.o(i.menu_handle_touch) refers to game.o(i.game_try_move) for game_try_move
     game_menu.o(i.menu_handle_touch) refers to sys.o(i.delay_ms) for delay_ms
+    game_menu.o(i.menu_handle_touch) refers to game_ai.o(i.ai_turn) for ai_turn
     game_menu.o(i.menu_handle_touch) refers to lcd.o(.data) for yScreen
-    game_menu.o(i.menu_handle_touch) refers to game.o(.data) for g_mode
+    game_menu.o(i.menu_handle_touch) refers to game.o(.data) for g_state
     game_menu.o(i.menu_handle_touch) refers to game.o(.bss) for g_board
     game_menu.o(i.menu_start_game) refers to game.o(i.game_reset_board) for game_reset_board
     game_menu.o(i.menu_start_game) refers to game.o(i.game_check_game_end) for game_check_game_end
@@ -1461,53 +1459,53 @@ Image Symbol Table
     i.display_draw_piece_at                  0x080028c0   Section        0  game_display.o(i.display_draw_piece_at)
     i.display_highlight_cell                 0x080029ac   Section        0  game_display.o(i.display_highlight_cell)
     i.display_init_game_view                 0x08002a08   Section        0  game_display.o(i.display_init_game_view)
-    i.display_set_game_over                  0x08002ab0   Section        0  game_display.o(i.display_set_game_over)
-    i.game_abs_i                             0x08002af0   Section        0  game.o(i.game_abs_i)
-    i.game_apply_captures                    0x08002b00   Section        0  game.o(i.game_apply_captures)
-    i.game_board_x0                          0x08002c80   Section        0  game.o(i.game_board_x0)
-    i.game_board_y0                          0x08002c84   Section        0  game.o(i.game_board_y0)
-    i.game_cell_size                         0x08002c88   Section        0  game.o(i.game_cell_size)
-    i.game_check_game_end                    0x08002c8c   Section        0  game.o(i.game_check_game_end)
-    i.game_count_pieces                      0x08002d1c   Section        0  game.o(i.game_count_pieces)
-    i.game_has_any_move                      0x08002d64   Section        0  game.o(i.game_has_any_move)
-    i.game_in_bounds                         0x08002dd8   Section        0  game.o(i.game_in_bounds)
-    i.game_init                              0x08002df4   Section        0  game.o(i.game_init)
-    i.game_reset_board                       0x08002e28   Section        0  game.o(i.game_reset_board)
-    i.game_rng_next                          0x08002e98   Section        0  game.o(i.game_rng_next)
-    i.game_touch_in_rect                     0x08002ebc   Section        0  game.o(i.game_touch_in_rect)
-    i.game_touch_to_cell                     0x08002ef4   Section        0  game.o(i.game_touch_to_cell)
-    i.game_try_move                          0x08002f58   Section        0  game.o(i.game_try_move)
-    i.game_update_status_bar                 0x08003018   Section        0  game_display.o(i.game_update_status_bar)
-    i.main                                   0x08003110   Section        0  main.o(i.main)
-    i.menu_draw_start_screen                 0x08003268   Section        0  game_menu.o(i.menu_draw_start_screen)
-    i.menu_draw_start_touch_status           0x08003388   Section        0  game_menu.o(i.menu_draw_start_touch_status)
-    i.menu_handle_touch                      0x08003408   Section        0  game_menu.o(i.menu_handle_touch)
-    i.menu_start_game                        0x0800361c   Section        0  game_menu.o(i.menu_start_game)
-    i.row_occupied_count                     0x0800362c   Section        0  game.o(i.row_occupied_count)
-    row_occupied_count                       0x0800362d   Thumb Code    32  game.o(i.row_occupied_count)
-    i.systick_init                           0x0800364c   Section        0  systick.o(i.systick_init)
-    i.time_handle                            0x080036b8   Section        0  systick.o(i.time_handle)
-    i.touch_delay_ms                         0x08003720   Section        0  lcd.o(i.touch_delay_ms)
-    touch_delay_ms                           0x08003721   Thumb Code    24  lcd.o(i.touch_delay_ms)
-    i.touch_delay_us                         0x08003738   Section        0  lcd.o(i.touch_delay_us)
-    touch_delay_us                           0x08003739   Thumb Code    32  lcd.o(i.touch_delay_us)
-    i.touch_exti_line                        0x08003758   Section        0  lcd.o(i.touch_exti_line)
-    touch_exti_line                          0x08003759   Thumb Code    18  lcd.o(i.touch_exti_line)
-    i.touch_gpio_rcc                         0x0800376c   Section        0  lcd.o(i.touch_gpio_rcc)
-    touch_gpio_rcc                           0x0800376d   Thumb Code    56  lcd.o(i.touch_gpio_rcc)
-    i.touch_pin_source                       0x080037b8   Section        0  lcd.o(i.touch_pin_source)
-    touch_pin_source                         0x080037b9   Thumb Code    32  lcd.o(i.touch_pin_source)
-    i.touch_raw_to_value                     0x080037d8   Section        0  lcd.o(i.touch_raw_to_value)
-    touch_raw_to_value                       0x080037d9   Thumb Code     8  lcd.o(i.touch_raw_to_value)
-    i.touch_read_axis_raw                    0x080037e0   Section        0  lcd.o(i.touch_read_axis_raw)
-    touch_read_axis_raw                      0x080037e1   Thumb Code    12  lcd.o(i.touch_read_axis_raw)
-    .constdata                               0x080037ec   Section     6144  lcd.o(.constdata)
-    .constdata                               0x08004fec   Section       32  game.o(.constdata)
-    dr                                       0x08004fec   Data          16  game.o(.constdata)
-    dc                                       0x08004ffc   Data          16  game.o(.constdata)
-    .constdata                               0x0800500c   Section       32  game_ai.o(.constdata)
-    dr                                       0x0800500c   Data          16  game_ai.o(.constdata)
-    dc                                       0x0800501c   Data          16  game_ai.o(.constdata)
+    i.display_set_game_over                  0x08002a90   Section        0  game_display.o(i.display_set_game_over)
+    i.game_abs_i                             0x08002ad0   Section        0  game.o(i.game_abs_i)
+    i.game_apply_captures                    0x08002ae0   Section        0  game.o(i.game_apply_captures)
+    i.game_board_x0                          0x08002c60   Section        0  game.o(i.game_board_x0)
+    i.game_board_y0                          0x08002c64   Section        0  game.o(i.game_board_y0)
+    i.game_cell_size                         0x08002c68   Section        0  game.o(i.game_cell_size)
+    i.game_check_game_end                    0x08002c6c   Section        0  game.o(i.game_check_game_end)
+    i.game_count_pieces                      0x08002cfc   Section        0  game.o(i.game_count_pieces)
+    i.game_has_any_move                      0x08002d44   Section        0  game.o(i.game_has_any_move)
+    i.game_in_bounds                         0x08002db8   Section        0  game.o(i.game_in_bounds)
+    i.game_init                              0x08002dd4   Section        0  game.o(i.game_init)
+    i.game_reset_board                       0x08002e08   Section        0  game.o(i.game_reset_board)
+    i.game_rng_next                          0x08002e78   Section        0  game.o(i.game_rng_next)
+    i.game_touch_in_rect                     0x08002e9c   Section        0  game.o(i.game_touch_in_rect)
+    i.game_touch_to_cell                     0x08002ed4   Section        0  game.o(i.game_touch_to_cell)
+    i.game_try_move                          0x08002f38   Section        0  game.o(i.game_try_move)
+    i.game_update_status_bar                 0x08002ff8   Section        0  game_display.o(i.game_update_status_bar)
+    i.main                                   0x080030f0   Section        0  main.o(i.main)
+    i.menu_draw_start_screen                 0x0800327c   Section        0  game_menu.o(i.menu_draw_start_screen)
+    i.menu_draw_start_touch_status           0x08003334   Section        0  game_menu.o(i.menu_draw_start_touch_status)
+    i.menu_handle_touch                      0x080033b4   Section        0  game_menu.o(i.menu_handle_touch)
+    i.menu_start_game                        0x08003570   Section        0  game_menu.o(i.menu_start_game)
+    i.row_occupied_count                     0x08003580   Section        0  game.o(i.row_occupied_count)
+    row_occupied_count                       0x08003581   Thumb Code    32  game.o(i.row_occupied_count)
+    i.systick_init                           0x080035a0   Section        0  systick.o(i.systick_init)
+    i.time_handle                            0x0800360c   Section        0  systick.o(i.time_handle)
+    i.touch_delay_ms                         0x08003674   Section        0  lcd.o(i.touch_delay_ms)
+    touch_delay_ms                           0x08003675   Thumb Code    24  lcd.o(i.touch_delay_ms)
+    i.touch_delay_us                         0x0800368c   Section        0  lcd.o(i.touch_delay_us)
+    touch_delay_us                           0x0800368d   Thumb Code    32  lcd.o(i.touch_delay_us)
+    i.touch_exti_line                        0x080036ac   Section        0  lcd.o(i.touch_exti_line)
+    touch_exti_line                          0x080036ad   Thumb Code    18  lcd.o(i.touch_exti_line)
+    i.touch_gpio_rcc                         0x080036c0   Section        0  lcd.o(i.touch_gpio_rcc)
+    touch_gpio_rcc                           0x080036c1   Thumb Code    56  lcd.o(i.touch_gpio_rcc)
+    i.touch_pin_source                       0x0800370c   Section        0  lcd.o(i.touch_pin_source)
+    touch_pin_source                         0x0800370d   Thumb Code    32  lcd.o(i.touch_pin_source)
+    i.touch_raw_to_value                     0x0800372c   Section        0  lcd.o(i.touch_raw_to_value)
+    touch_raw_to_value                       0x0800372d   Thumb Code     8  lcd.o(i.touch_raw_to_value)
+    i.touch_read_axis_raw                    0x08003734   Section        0  lcd.o(i.touch_read_axis_raw)
+    touch_read_axis_raw                      0x08003735   Thumb Code    12  lcd.o(i.touch_read_axis_raw)
+    .constdata                               0x08003740   Section     6144  lcd.o(.constdata)
+    .constdata                               0x08004f40   Section       32  game.o(.constdata)
+    dr                                       0x08004f40   Data          16  game.o(.constdata)
+    dc                                       0x08004f50   Data          16  game.o(.constdata)
+    .constdata                               0x08004f60   Section       32  game_ai.o(.constdata)
+    dr                                       0x08004f60   Data          16  game_ai.o(.constdata)
+    dc                                       0x08004f70   Data          16  game_ai.o(.constdata)
     .data                                    0x20000000   Section        5  main.o(.data)
     was_down                                 0x20000000   Data           4  main.o(.data)
     diag_div                                 0x20000004   Data           1  main.o(.data)
@@ -1757,37 +1755,37 @@ Image Symbol Table
     display_draw_button                      0x08002819   Thumb Code   162  game_display.o(i.display_draw_button)
     display_draw_piece_at                    0x080028c1   Thumb Code   232  game_display.o(i.display_draw_piece_at)
     display_highlight_cell                   0x080029ad   Thumb Code    88  game_display.o(i.display_highlight_cell)
-    display_init_game_view                   0x08002a09   Thumb Code   110  game_display.o(i.display_init_game_view)
-    display_set_game_over                    0x08002ab1   Thumb Code    56  game_display.o(i.display_set_game_over)
-    game_abs_i                               0x08002af1   Thumb Code    14  game.o(i.game_abs_i)
-    game_apply_captures                      0x08002b01   Thumb Code   378  game.o(i.game_apply_captures)
-    game_board_x0                            0x08002c81   Thumb Code     4  game.o(i.game_board_x0)
-    game_board_y0                            0x08002c85   Thumb Code     4  game.o(i.game_board_y0)
-    game_cell_size                           0x08002c89   Thumb Code     4  game.o(i.game_cell_size)
-    game_check_game_end                      0x08002c8d   Thumb Code    78  game.o(i.game_check_game_end)
-    game_count_pieces                        0x08002d1d   Thumb Code    70  game.o(i.game_count_pieces)
-    game_has_any_move                        0x08002d65   Thumb Code   106  game.o(i.game_has_any_move)
-    game_in_bounds                           0x08002dd9   Thumb Code    26  game.o(i.game_in_bounds)
-    game_init                                0x08002df5   Thumb Code    28  game.o(i.game_init)
-    game_reset_board                         0x08002e29   Thumb Code    90  game.o(i.game_reset_board)
-    game_rng_next                            0x08002e99   Thumb Code    22  game.o(i.game_rng_next)
-    game_touch_in_rect                       0x08002ebd   Thumb Code    56  game.o(i.game_touch_in_rect)
-    game_touch_to_cell                       0x08002ef5   Thumb Code   100  game.o(i.game_touch_to_cell)
-    game_try_move                            0x08002f59   Thumb Code   182  game.o(i.game_try_move)
-    game_update_status_bar                   0x08003019   Thumb Code   150  game_display.o(i.game_update_status_bar)
-    main                                     0x08003111   Thumb Code   290  main.o(i.main)
-    menu_draw_start_screen                   0x08003269   Thumb Code   170  game_menu.o(i.menu_draw_start_screen)
-    menu_draw_start_touch_status             0x08003389   Thumb Code   118  game_menu.o(i.menu_draw_start_touch_status)
-    menu_handle_touch                        0x08003409   Thumb Code   476  game_menu.o(i.menu_handle_touch)
-    menu_start_game                          0x0800361d   Thumb Code    16  game_menu.o(i.menu_start_game)
-    systick_init                             0x0800364d   Thumb Code    98  systick.o(i.systick_init)
-    time_handle                              0x080036b9   Thumb Code    82  systick.o(i.time_handle)
-    asc2_1206                                0x080037ec   Data        1140  lcd.o(.constdata)
-    asc2_1608                                0x08003c60   Data        1520  lcd.o(.constdata)
-    asc2_2412                                0x08004250   Data        3420  lcd.o(.constdata)
-    CN_DataBuf                               0x08004fac   Data          64  lcd.o(.constdata)
-    Region$$Table$$Base                      0x0800502c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800504c   Number         0  anon$$obj.o(Region$$Table)
+    display_init_game_view                   0x08002a09   Thumb Code    98  game_display.o(i.display_init_game_view)
+    display_set_game_over                    0x08002a91   Thumb Code    56  game_display.o(i.display_set_game_over)
+    game_abs_i                               0x08002ad1   Thumb Code    14  game.o(i.game_abs_i)
+    game_apply_captures                      0x08002ae1   Thumb Code   378  game.o(i.game_apply_captures)
+    game_board_x0                            0x08002c61   Thumb Code     4  game.o(i.game_board_x0)
+    game_board_y0                            0x08002c65   Thumb Code     4  game.o(i.game_board_y0)
+    game_cell_size                           0x08002c69   Thumb Code     4  game.o(i.game_cell_size)
+    game_check_game_end                      0x08002c6d   Thumb Code    78  game.o(i.game_check_game_end)
+    game_count_pieces                        0x08002cfd   Thumb Code    70  game.o(i.game_count_pieces)
+    game_has_any_move                        0x08002d45   Thumb Code   106  game.o(i.game_has_any_move)
+    game_in_bounds                           0x08002db9   Thumb Code    26  game.o(i.game_in_bounds)
+    game_init                                0x08002dd5   Thumb Code    28  game.o(i.game_init)
+    game_reset_board                         0x08002e09   Thumb Code    90  game.o(i.game_reset_board)
+    game_rng_next                            0x08002e79   Thumb Code    22  game.o(i.game_rng_next)
+    game_touch_in_rect                       0x08002e9d   Thumb Code    56  game.o(i.game_touch_in_rect)
+    game_touch_to_cell                       0x08002ed5   Thumb Code   100  game.o(i.game_touch_to_cell)
+    game_try_move                            0x08002f39   Thumb Code   182  game.o(i.game_try_move)
+    game_update_status_bar                   0x08002ff9   Thumb Code   150  game_display.o(i.game_update_status_bar)
+    main                                     0x080030f1   Thumb Code   338  main.o(i.main)
+    menu_draw_start_screen                   0x0800327d   Thumb Code   110  game_menu.o(i.menu_draw_start_screen)
+    menu_draw_start_touch_status             0x08003335   Thumb Code   118  game_menu.o(i.menu_draw_start_touch_status)
+    menu_handle_touch                        0x080033b5   Thumb Code   406  game_menu.o(i.menu_handle_touch)
+    menu_start_game                          0x08003571   Thumb Code    16  game_menu.o(i.menu_start_game)
+    systick_init                             0x080035a1   Thumb Code    98  systick.o(i.systick_init)
+    time_handle                              0x0800360d   Thumb Code    82  systick.o(i.time_handle)
+    asc2_1206                                0x08003740   Data        1140  lcd.o(.constdata)
+    asc2_1608                                0x08003bb4   Data        1520  lcd.o(.constdata)
+    asc2_2412                                0x080041a4   Data        3420  lcd.o(.constdata)
+    CN_DataBuf                               0x08004f00   Data          64  lcd.o(.constdata)
+    Region$$Table$$Base                      0x08004f80   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08004fa0   Number         0  anon$$obj.o(Region$$Table)
     temps                                    0x20000008   Data           4  exti.o(.data)
     TimeSecond                               0x2000000c   Data           4  systick.o(.data)
     Time1msConunt                            0x20000010   Data           4  systick.o(.data)
@@ -1845,9 +1843,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00005128, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000507c, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000504c, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x00004fa0, Max: 0x00040000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1975,47 +1973,47 @@ Memory Map of the image
     0x08002818   0x000000a8   Code   RO          902    i.display_draw_button  game_display.o
     0x080028c0   0x000000ec   Code   RO          903    i.display_draw_piece_at  game_display.o
     0x080029ac   0x0000005c   Code   RO          904    i.display_highlight_cell  game_display.o
-    0x08002a08   0x000000a8   Code   RO          905    i.display_init_game_view  game_display.o
-    0x08002ab0   0x00000040   Code   RO          906    i.display_set_game_over  game_display.o
-    0x08002af0   0x0000000e   Code   RO          773    i.game_abs_i        game.o
-    0x08002afe   0x00000002   PAD
-    0x08002b00   0x00000180   Code   RO          774    i.game_apply_captures  game.o
-    0x08002c80   0x00000004   Code   RO          775    i.game_board_x0     game.o
-    0x08002c84   0x00000004   Code   RO          776    i.game_board_y0     game.o
-    0x08002c88   0x00000004   Code   RO          777    i.game_cell_size    game.o
-    0x08002c8c   0x00000090   Code   RO          778    i.game_check_game_end  game.o
-    0x08002d1c   0x00000046   Code   RO          779    i.game_count_pieces  game.o
-    0x08002d62   0x00000002   PAD
-    0x08002d64   0x00000074   Code   RO          780    i.game_has_any_move  game.o
-    0x08002dd8   0x0000001a   Code   RO          781    i.game_in_bounds    game.o
-    0x08002df2   0x00000002   PAD
-    0x08002df4   0x00000034   Code   RO          782    i.game_init         game.o
-    0x08002e28   0x00000070   Code   RO          783    i.game_reset_board  game.o
-    0x08002e98   0x00000024   Code   RO          784    i.game_rng_next     game.o
-    0x08002ebc   0x00000038   Code   RO          785    i.game_touch_in_rect  game.o
-    0x08002ef4   0x00000064   Code   RO          786    i.game_touch_to_cell  game.o
-    0x08002f58   0x000000c0   Code   RO          787    i.game_try_move     game.o
-    0x08003018   0x000000f8   Code   RO          907    i.game_update_status_bar  game_display.o
-    0x08003110   0x00000158   Code   RO            1    i.main              main.o
-    0x08003268   0x00000120   Code   RO          954    i.menu_draw_start_screen  game_menu.o
-    0x08003388   0x00000080   Code   RO          955    i.menu_draw_start_touch_status  game_menu.o
-    0x08003408   0x00000214   Code   RO          956    i.menu_handle_touch  game_menu.o
-    0x0800361c   0x00000010   Code   RO          957    i.menu_start_game   game_menu.o
-    0x0800362c   0x00000020   Code   RO          788    i.row_occupied_count  game.o
-    0x0800364c   0x0000006c   Code   RO          226    i.systick_init      systick.o
-    0x080036b8   0x00000068   Code   RO          227    i.time_handle       systick.o
-    0x08003720   0x00000018   Code   RO          448    i.touch_delay_ms    lcd.o
-    0x08003738   0x00000020   Code   RO          449    i.touch_delay_us    lcd.o
-    0x08003758   0x00000012   Code   RO          451    i.touch_exti_line   lcd.o
-    0x0800376a   0x00000002   PAD
-    0x0800376c   0x0000004c   Code   RO          453    i.touch_gpio_rcc    lcd.o
-    0x080037b8   0x00000020   Code   RO          454    i.touch_pin_source  lcd.o
-    0x080037d8   0x00000008   Code   RO          455    i.touch_raw_to_value  lcd.o
-    0x080037e0   0x0000000c   Code   RO          456    i.touch_read_axis_raw  lcd.o
-    0x080037ec   0x00001800   Data   RO          458    .constdata          lcd.o
-    0x08004fec   0x00000020   Data   RO          790    .constdata          game.o
-    0x0800500c   0x00000020   Data   RO          888    .constdata          game_ai.o
-    0x0800502c   0x00000020   Data   RO         4234    Region$$Table       anon$$obj.o
+    0x08002a08   0x00000088   Code   RO          905    i.display_init_game_view  game_display.o
+    0x08002a90   0x00000040   Code   RO          906    i.display_set_game_over  game_display.o
+    0x08002ad0   0x0000000e   Code   RO          773    i.game_abs_i        game.o
+    0x08002ade   0x00000002   PAD
+    0x08002ae0   0x00000180   Code   RO          774    i.game_apply_captures  game.o
+    0x08002c60   0x00000004   Code   RO          775    i.game_board_x0     game.o
+    0x08002c64   0x00000004   Code   RO          776    i.game_board_y0     game.o
+    0x08002c68   0x00000004   Code   RO          777    i.game_cell_size    game.o
+    0x08002c6c   0x00000090   Code   RO          778    i.game_check_game_end  game.o
+    0x08002cfc   0x00000046   Code   RO          779    i.game_count_pieces  game.o
+    0x08002d42   0x00000002   PAD
+    0x08002d44   0x00000074   Code   RO          780    i.game_has_any_move  game.o
+    0x08002db8   0x0000001a   Code   RO          781    i.game_in_bounds    game.o
+    0x08002dd2   0x00000002   PAD
+    0x08002dd4   0x00000034   Code   RO          782    i.game_init         game.o
+    0x08002e08   0x00000070   Code   RO          783    i.game_reset_board  game.o
+    0x08002e78   0x00000024   Code   RO          784    i.game_rng_next     game.o
+    0x08002e9c   0x00000038   Code   RO          785    i.game_touch_in_rect  game.o
+    0x08002ed4   0x00000064   Code   RO          786    i.game_touch_to_cell  game.o
+    0x08002f38   0x000000c0   Code   RO          787    i.game_try_move     game.o
+    0x08002ff8   0x000000f8   Code   RO          907    i.game_update_status_bar  game_display.o
+    0x080030f0   0x0000018c   Code   RO            1    i.main              main.o
+    0x0800327c   0x000000b8   Code   RO          954    i.menu_draw_start_screen  game_menu.o
+    0x08003334   0x00000080   Code   RO          955    i.menu_draw_start_touch_status  game_menu.o
+    0x080033b4   0x000001bc   Code   RO          956    i.menu_handle_touch  game_menu.o
+    0x08003570   0x00000010   Code   RO          957    i.menu_start_game   game_menu.o
+    0x08003580   0x00000020   Code   RO          788    i.row_occupied_count  game.o
+    0x080035a0   0x0000006c   Code   RO          226    i.systick_init      systick.o
+    0x0800360c   0x00000068   Code   RO          227    i.time_handle       systick.o
+    0x08003674   0x00000018   Code   RO          448    i.touch_delay_ms    lcd.o
+    0x0800368c   0x00000020   Code   RO          449    i.touch_delay_us    lcd.o
+    0x080036ac   0x00000012   Code   RO          451    i.touch_exti_line   lcd.o
+    0x080036be   0x00000002   PAD
+    0x080036c0   0x0000004c   Code   RO          453    i.touch_gpio_rcc    lcd.o
+    0x0800370c   0x00000020   Code   RO          454    i.touch_pin_source  lcd.o
+    0x0800372c   0x00000008   Code   RO          455    i.touch_raw_to_value  lcd.o
+    0x08003734   0x0000000c   Code   RO          456    i.touch_read_axis_raw  lcd.o
+    0x08003740   0x00001800   Data   RO          458    .constdata          lcd.o
+    0x08004f40   0x00000020   Data   RO          790    .constdata          game.o
+    0x08004f60   0x00000020   Data   RO          888    .constdata          game_ai.o
+    0x08004f80   0x00000020   Data   RO         4234    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x000004b8, Max: 0x0000c000, ABSOLUTE)
@@ -2049,10 +2047,10 @@ Image component sizes
         32          4          0          4          0        633   exti.o
       1378        152         32         16         25      10739   game.o
        364         16         32          0          0       1290   game_ai.o
-      1176        192          0          0          0       5301   game_display.o
-       964        184          0          0          0       2502   game_menu.o
+      1144        172          0          0          0       5293   game_display.o
+       772        122          0          0          0       2442   game_menu.o
       5582        468       6144        119         46      30739   lcd.o
-       344         54          0          5          0     244055   main.o
+       396         58          0          5          0     244079   main.o
        192         30          0          0          0       2755   misc.o
         48         12        304          0        512        892   startup_stm32f10x_hd.o
         52         12          0          0          0       1188   stm32f10x_exti.o
@@ -2067,7 +2065,7 @@ Image component sizes
        372         38          0         12        400       9137   uart.o
 
     ----------------------------------------------------------------------
-     12334       1290       6544        220        988     340380   Object Totals
+     12162       1212       6544        220        988     340336   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         28          0          0          4          5          0   (incl. Padding)
 
@@ -2119,15 +2117,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     14012       1316       6544        220        988     335536   Grand Totals
-     14012       1316       6544        220        988     335536   ELF Image Totals
-     14012       1316       6544        220          0          0   ROM Totals
+     13840       1238       6544        220        988     335492   Grand Totals
+     13840       1238       6544        220        988     335492   ELF Image Totals
+     13840       1238       6544        220          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                20556 (  20.07kB)
+    Total RO  Size (Code + RO Data)                20384 (  19.91kB)
     Total RW  Size (RW Data + ZI Data)              1208 (   1.18kB)
-    Total ROM Size (Code + RO Data + RW Data)      20776 (  20.29kB)
+    Total ROM Size (Code + RO Data + RW Data)      20604 (  20.12kB)
 
 ==============================================================================
 

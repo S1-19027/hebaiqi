@@ -107,10 +107,19 @@ int main(void)
 			PressFlag = 0;
 			if (g_ui == UI_START)
 			{
-				if (game_touch_in_rect(xScreen, yScreen, 40, 28, 200, 68))
+				if (game_touch_in_rect(xScreen, yScreen, 40, 50, 200, 100))
 				{
-					g_ui = UI_GAME;			  // 切换到游戏界面
-					display_init_game_view(); // 切换到游戏界面
+					// 选择PVE模式并开始游戏
+					g_mode = MODE_PVE;
+					g_ui = UI_GAME;
+					menu_start_game(); // 开始游戏，重置棋盘
+				}
+				else if (game_touch_in_rect(xScreen, yScreen, 40, 110, 200, 160))
+				{
+					// 选择PVP模式并开始游戏
+					g_mode = MODE_PVP;
+					g_ui = UI_GAME;
+					menu_start_game(); // 开始游戏，重置棋盘
 				}
 			}
 			else

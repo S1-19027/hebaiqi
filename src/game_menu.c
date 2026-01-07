@@ -24,9 +24,19 @@ void menu_draw_start_screen(void)
     LCD_Clear(WHITE);
     POINT_COLOR = BLACK;
     BACK_COLOR = WHITE;
-    // LCD_ShowString(60, 6, 240, 20, 16, (u8 *)"TOUCH TEST");
-    display_draw_button(40, 28, 200, 68, "START GAME", 1);
-    LCD_ShowString(20, 78, 240, 12, 12, (u8 *)"Tap START GAME to enter game screen");
+
+    // 显示游戏标题
+    LCD_ShowString(80, 10, 240, 20, 16, (u8 *)"GAME MENU");
+
+    // 绘制PVE模式选择框
+    display_draw_button(40, 50, 200, 100, "PVE MODE", 1);
+    
+    // 绘制PVP模式选择框
+    display_draw_button(40, 110, 200, 160, "PVP MODE", 1);
+    
+    // 显示说明文字
+    LCD_ShowString(20, 170, 240, 12, 12, (u8 *)"Tap PVE/PVP to start game");
+
     menu_draw_start_touch_status();
 }
 
@@ -43,18 +53,19 @@ void menu_draw_start_touch_status(void)
     Touch_ReadDiag(&miu, &mid, &mif, &act, &cs_odr, &cs_idr_low, &cs_idr_high, &clk_idr_low, &clk_idr_high);
     Touch_Scan_MISO(&a6, &b4, &c2, &c1);
 
-    LCD_Fill(0, 96, 239, 96 + 16 * 4 - 1, WHITE); // 增加高度显示4行
+    // 调整显示位置到屏幕底部，避免与主界面按钮重叠
+    LCD_Fill(0, 170, 239, 170 + 16 * 4 - 1, WHITE);
     POINT_COLOR = BLUE;
     BACK_COLOR = WHITE;
 
     // sprintf(buf, "PEN:%d AD:%4d,%4d", pen, xScreenAD, yScreenAD);
-    // LCD_ShowString(6, 96, 240, 16, 16, (u8 *)buf);
+    // LCD_ShowString(6, 170, 240, 16, 16, (u8 *)buf);
 
     // sprintf(buf, "M:%d%d%d CS:%d%d%d CK:%d%d", miu, mid, mif, cs_odr,cs_idr_low, cs_idr_high, clk_idr_low, clk_idr_high);
-    // LCD_ShowString(6, 112, 240, 16, 16, (u8 *)buf);
+    // LCD_ShowString(6, 186, 240, 16, 16, (u8 *)buf);
 
     // sprintf(buf, "SCAN A6:%d B4:%d C2:%d C1:%d", a6, b4, c2, c1);
-    // LCD_ShowString(6, 128, 240, 16, 16, (u8 *)buf);
+    // LCD_ShowString(6, 202, 240, 16, 16, (u8 *)buf);
 }
 
 // 开始游戏
@@ -79,13 +90,10 @@ void menu_handle_touch(void)
 
     if (game_touch_in_rect(xScreen, yScreen, 125, 285, 230, 315))
     {
-        g_mode = (g_mode == MODE_PVE) ? MODE_PVP : MODE_PVE;
-        display_draw_button(125, 285, 230, 315, g_mode == MODE_PVE ? "MODE:PVE" : "MODE:PVP", 1);
-        game_update_status_bar();
-        if (g_state == STATE_PLAYING && g_mode == MODE_PVE && g_turn == CELL_WHITE)
-        {
-            ai_turn();
-        }
+        // 返回主菜单
+        g_state = STATE_MENU;
+        g_ui = UI_START;
+        menu_draw_start_screen();
         return;
     }
 
